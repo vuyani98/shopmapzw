@@ -226,7 +226,7 @@ export default function HomePage() {
 
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 bg-primary-black rounded-lg p-1">
+              <div className="flex items-center space-x-2 bg-primary-black rounded-lg p-1 deskTopBtn">
                 <button
                   onClick={() => setViewMode("grid")}
                   className={`p-2 rounded-md transition-colors ${

@@ -95,7 +95,7 @@ export default function ShopDetail({ shop, onBack }: ShopDetailProps) {
                 src={shop.images[0] || "/icons8-placeholder-96.png?height=400&width=800"}
                 alt={shop.name}
                 fill
-                className="object-cover"
+                className="object-cover shopImage"
                 sizes="100vw"
                 priority
               />

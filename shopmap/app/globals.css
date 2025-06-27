@@ -39,6 +39,7 @@ button {
 
 .bar-input {
   border: none;
+  padding-inline: 10px;
 }
 
 .bar-input:focus {
@@ -46,6 +47,24 @@ button {
   border: none !important;
 }
 
+.catBtn{
+  color: var(--primary-black) !important;
+  margin-inline: 5px;
+}
+
+.deskTopBtn{
+  background: none !important;
+}
+
+.catScrollBar{
+  margin-block-end: 20px;
+}
+
+.shopImage{
+  position:  relative !important;
+  width: 300px !important;
+  height: auto;
+}
 /* Custom Color Classes */
 .bg-primary-dark {
   background-color: var(--primary-dark);
