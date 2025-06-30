@@ -90,7 +90,7 @@ export default function ShopDetail({ shop, onBack }: ShopDetailProps) {
         {/* Hero Image Section */}
         <div className="relative">
           {shop.images && shop.images.length > 0 && (
-            <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-200 overflow-hidden">
+            <div className="aspect-[16/9] md:aspect-[21/9] bg-gray-200 overflow-hidden shopDetailBanner">
               <Image
                 src={shop.images[0] || "/icons8-placeholder-96.png?height=400&width=800"}
                 alt={shop.name}
@@ -99,50 +99,51 @@ export default function ShopDetail({ shop, onBack }: ShopDetailProps) {
                 sizes="100vw"
                 priority
               />
+              {/* Floating Info Card */}
+              <div className="absolute bottom-6 left-6 right-6 md:left-8 md:right-auto md:max-w-md shopDetailCard">
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{shop.name}</h1>
+                      {shop.rating && (
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="flex items-center gap-1">
+                            <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                            <span className="font-semibold text-gray-900">{shop.rating}</span>
+                          </div>
+                          <span className="text-gray-600">({shop.reviews_count} reviews)</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {shop.price_range && (
+                    <div className="mb-3">
+                      <span className="text-2xl font-bold text-orange-600">{shop.price_range}</span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-2 text-gray-600 mb-4">
+                    <MapPin className="w-5 h-5" />
+                    <div>
+                      <p className="font-medium text-gray-900">{shop.building}</p>
+                      <p className="text-sm">
+                        {shop.floor} • Shop {shop.shop_number}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
             </div>
           )}
 
-          {/* Floating Info Card */}
-          <div className="absolute bottom-6 left-6 right-6 md:left-8 md:right-auto md:max-w-md">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{shop.name}</h1>
-                  {shop.rating && (
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                        <span className="font-semibold text-gray-900">{shop.rating}</span>
-                      </div>
-                      <span className="text-gray-600">({shop.reviews_count} reviews)</span>
-                    </div>
-                  )}
-                </div>
-              </div>
 
-              {shop.price_range && (
-                <div className="mb-3">
-                  <span className="text-2xl font-bold text-orange-600">{shop.price_range}</span>
-                </div>
-              )}
-
-              <div className="flex items-center gap-2 text-gray-600 mb-4">
-                <MapPin className="w-5 h-5" />
-                <div>
-                  <p className="font-medium text-gray-900">{shop.building}</p>
-                  <p className="text-sm">
-                    {shop.floor} • Shop {shop.shop_number}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="px-6 py-8">
           {/* Weekly Special */}
           {shop.weekly_special && (
-            <div className="bg-gradient-to-r from-orange-400 to-pink-500 rounded-2xl p-6 mb-8 text-white">
+            <div className="bg-gradient-to-r from-orange-400 to-pink-500 rounded-2xl p-6 mb-8">
               <h3 className="font-bold text-xl mb-2">🎉 This Week&apos;s Special Offer</h3>
               <p className="text-lg opacity-95">{shop.weekly_special}</p>
             </div>

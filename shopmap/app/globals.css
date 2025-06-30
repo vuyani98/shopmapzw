@@ -59,13 +59,25 @@ button {
 .catScrollBar{
   margin-block-end: 20px;
 }
-
+/*
 .shopImage{
   position:  relative !important;
   width: 300px !important;
   height: auto;
-}
+} */
 /* Custom Color Classes */
+
+.shopDetailBanner {
+  min-height: 400px;
+}
+
+.shopDetailCard {
+  position: absolute;
+  background: #ffffff5e;
+  backdrop-filter: blur(10px);
+  bottom: 0px;
+}
+
 .bg-primary-dark {
   background-color: var(--primary-dark);
 }
@@ -363,6 +375,7 @@ button {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  padding-inline: 1rem;
 }
 
 .mb-2 {
