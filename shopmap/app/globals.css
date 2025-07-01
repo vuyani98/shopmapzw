@@ -59,6 +59,10 @@ button {
 .catScrollBar{
   margin-block-end: 20px;
 }
+
+.clockGap {
+  gap: 0.5rem;
+}
 /*
 .shopImage{
   position:  relative !important;

@@ -177,7 +177,7 @@ export default function ShopDetail({ shop, onBack }: ShopDetailProps) {
 
           {/* Operating Hours */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2 clockGap">
               <Clock className="w-6 h-6" />
               Operating Hours
             </h3>
